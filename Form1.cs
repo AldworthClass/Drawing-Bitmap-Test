@@ -13,24 +13,18 @@ namespace Drawing_Bitmap_Test
 {
     public partial class Form1 : Form
     {
-        Bitmap corn, plate, cabbage;
+        Bitmap corn, plate, cabbage; // These are all of the toppings that can be drawn
       
-        // Stores the toppings that are 'on/in' the dish and need to be drawn
+        // Stores the toppings that are 'on/in' the dish and need to be currently drawn
         List<Bitmap> toppings; 
 
         public Form1()
         {
             InitializeComponent();
-
             toppings = new List<Bitmap>();
             corn = new Bitmap(Resources.corn3);
             cabbage = new Bitmap(Resources.cabbage3);
-            plate = new Bitmap(Resources.essential_dinner_plate);
-            plate = new Bitmap(plate, new Size(imgPlate.Width, imgPlate.Height));
-            
-            
-            
-        
+            plate = new Bitmap(Resources.essential_dinner_plate, new Size(imgPlate.Width, imgPlate.Height)); // The plate is scaled to fit the picturebox
         }
 
         private void btnAddCorn_Click(object sender, EventArgs e)
