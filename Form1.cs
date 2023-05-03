@@ -29,8 +29,8 @@ namespace Drawing_Bitmap_Test
 
         private void btnAddCorn_Click(object sender, EventArgs e)
         {
-            if (toppings.Contains(corn))// User removes corn
-                toppings.Remove(corn);
+            if (toppings.Contains(corn))  // Checks to see if corn is already in the dish
+                toppings.Remove(corn);// User removes corn if it is already there
             else
                 toppings.Add(corn);  // User adds corn
 
@@ -52,8 +52,8 @@ namespace Drawing_Bitmap_Test
 
         private void btnAddCabbage_Click(object sender, EventArgs e)
         {
-            if (toppings.Contains(cabbage)) // User removes cabbage
-                toppings.Remove(cabbage);
+            if (toppings.Contains(cabbage)) // Checks to see if cabbage is already in the dish
+                toppings.Remove(cabbage);  // Removes cabbage if it is already in the dish
             else
                 toppings.Add(cabbage);  // User adds cabbage
             
